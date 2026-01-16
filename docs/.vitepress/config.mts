@@ -1,7 +1,10 @@
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
+
+const base="personSite"
 export default defineConfig({
+  base,
   title: "redblacktree's site",
   description: "A VitePress Site",
   themeConfig: {
