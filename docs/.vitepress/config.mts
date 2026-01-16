@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 
 export default defineConfig({
-  base:"personSite",
+  base:"/personSite/",
   title: "redblacktree's site",
   description: "A VitePress Site",
   themeConfig: {
