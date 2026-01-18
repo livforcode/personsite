@@ -47,7 +47,7 @@ function getList(params, path1, pathname) {
       }
       res.push({
         text: name,
-        link: `${pathname}/${name}`,
+        link: `/${pathname}/${name}`,
       });
     }
   }
@@ -62,19 +62,11 @@ function getList(params, path1, pathname) {
 export const set_sidebar = (pathname) => {
   // 获取pathname的路径
   const dirPath = path.join(DIR_PATH, '/docs/src/'+pathname);
-  // console.log("pathname",pathname)
-  // console.log("DIR_PATH",DIR_PATH)
 
-  // 读取pathname下的所有文件或者文件夹
   const files = fs.readdirSync(dirPath);
   // 过滤掉
   const items = intersections(files, WHITE_LIST);
-  // getList 函数后面会讲到
-
-  // console.log("items",items)
-
   const res=getList(items, dirPath, pathname);
    
-  // console.log("res",res)
   return res;
 };
